@@ -1,0 +1,124 @@
+
+body{
+    min-height: 100vh;
+   /* width: 1440px; */
+   font-size: 13px;
+   font-family: 'Barlow Semi Condensed', sans-serif;
+   background-color: hsl(210, 46%, 95%);
+}
+
+.container{
+    display: grid;
+    grid-auto-rows: minmax(85px, auto);
+    grid-auto-columns: max-content(400px);
+    grid-gap: 20px;
+    grid-template-areas: 
+    " tf tf tm tr "
+    " bf bm bm tr"
+    /* "tf tf tf tm tm tr tr"
+    "tf tf tf tm tm tr tr"
+    "bf bf bm bm bm tr tr"
+    "bf bf bm bm bm tr tr" */
+    
+    ;
+   margin: 2rem;
+
+}
+
+.box{
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 5px 7px rgba(0,0,0,0.1);
+    padding-bottom: 1.3rem;
+    
+}
+.top-left{
+    grid-area: tf;
+    padding-left: 1rem;
+    background-color: hsl(263, 55%, 52%);
+    background-image: url('/images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+}
+
+.top-midle{
+    grid-area: tm;
+    background-color: hsl(217, 19%, 35%);
+}
+.top-right{
+    grid-area: tr;
+    background-color: hsl(0, 0%, 100%);
+    color: black;
+}
+.bottom-left{
+    grid-area: bf;
+    background-color: hsl(0, 0%, 100%);
+    color: black;
+}
+.bottom-midle{
+    grid-area: bm;
+    background-color: hsl(219, 29%, 14%);
+}
+img{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+.image{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.image h4{
+    margin-left: 10px;
+    color: hsl(0, 0%, 81%);
+}
+.image span{
+    opacity: 0.5;
+}
+h3{
+    margin-left: 30px;
+    font-size: 1.1rem;
+    margin-top: -2px;
+    color: hsl(0, 45%, 96%);
+}
+p{
+    opacity: 0.5;
+    margin-left: 30px;
+}
+.color{
+    color: black;
+    opacity: 0.6;
+}
+.name{
+    color: #000;
+}
+
+@media(max-width:800px){
+    .container{
+       grid-template-areas:
+       "tf tf"
+       "tm tr"
+       " bf tr"
+       " bm bm"
+       
+       
+       
+       ;
+    }
+}
+@media(max-width:600px){
+    .container{
+        grid-template-areas: 
+        " tf  "
+        " tm "
+        " bf "
+        " bm"
+        " tr";
+        
+    }
+
+}
